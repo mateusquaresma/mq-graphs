@@ -7,11 +7,18 @@ public class Main {
 
         Graph graph = new Graph(13);
 
-        graph.addEdge(0, 5);
+
+//        graph.addEdge(0,1);
+//        graph.addEdge(0,2);
+//        graph.addEdge(2,3);
+//        graph.addEdge(3,1);
+
+
         graph.addEdge(4, 3);
-        graph.addEdge(0, 1);
         graph.addEdge(9, 12);
         graph.addEdge(6, 4);
+        graph.addEdge(0, 5);
+        graph.addEdge(0, 1);
         graph.addEdge(5, 4);
         graph.addEdge(0, 2);
         graph.addEdge(11, 12);
@@ -36,6 +43,8 @@ public class Main {
             System.out.print("NOT ");
 
         System.out.println("connected");
+
+        System.out.println("Has Cycle = " + search.hasCycle());
 
 
         TopologicalSort sort = new TopologicalSort(graph, 0);
