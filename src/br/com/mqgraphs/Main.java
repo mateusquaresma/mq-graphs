@@ -46,12 +46,23 @@ public class Main {
 
         System.out.println("Has Cycle = " + search.hasCycle());
 
-
         TopologicalSort sort = new TopologicalSort(graph, 0);
 
         for (Pair pair : sort.items()) {
             System.out.print(pair);
         }
+
+        System.out.println();
+
+        BreadthFirstSearch bsearch = new BreadthFirstSearch(graph, 0);
+
+        for (int v = 0; v < graph.V(); v++) {
+            if (bsearch.marked(v))
+                System.out.print(v + " ");
+        }
+
+
+
 
 
     }
